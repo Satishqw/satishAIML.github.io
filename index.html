@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Satish Padmanabuni | AI/ML Portfolio</title>
+<title>Satish Padmanabuni | AI Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -12,7 +12,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
-  background:#020617;
+  background:linear-gradient(135deg,#020617,#0f172a);
   color:white;
   scroll-behavior:smooth;
 }
@@ -21,26 +21,20 @@ body{
 nav{
   position:fixed;
   width:100%;
-  top:0;
-  background:rgba(2,6,23,0.95);
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
   display:flex;
   justify-content:space-between;
-  padding:10px 30px;
+  padding:12px 30px;
   z-index:1000;
-  border-bottom:1px solid #1e293b;
 }
 
-nav h2{color:#38bdf8;font-size:18px;}
-nav a{
-  color:#cbd5f5;
-  margin-left:15px;
-  text-decoration:none;
-  font-size:14px;
-}
+nav h2{color:#38bdf8;}
+nav a{color:white;margin-left:15px;text-decoration:none;font-size:14px;}
 
 /* HERO */
 .hero{
-  height:85vh;
+  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -49,69 +43,55 @@ nav a{
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:50px;
   background:linear-gradient(90deg,#38bdf8,#a78bfa);
   -webkit-background-clip:text;
   color:transparent;
 }
 
-.hero p{
-  font-size:15px;
-  color:#cbd5f5;
-}
+.hero p{color:#cbd5f5;margin-top:10px;}
 
-/* SECTIONS */
-section{padding:50px 8%;}
+/* SECTION */
+section{padding:60px 8%;}
+
 h2{
-  margin-bottom:20px;
-  font-size:24px;
-  border-left:4px solid #38bdf8;
+  border-left:5px solid #38bdf8;
   padding-left:10px;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
+  margin-bottom:30px;
 }
 
 /* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
 .card{
-  background:#0f172a;
-  padding:15px;
-  border-radius:10px;
-  transition:0.3s;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:20px;
+  border-radius:15px;
+  transition:0.4s;
+  cursor:pointer;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 10px #38bdf8;
+  transform:translateY(-10px);
+  box-shadow:0 0 20px #38bdf8;
 }
 
-/* SKILL BARS */
-.skill{margin-bottom:10px;}
-.bar{
-  background:#1e293b;
-  border-radius:10px;
-  overflow:hidden;
-}
-.bar div{
-  height:8px;
-  background:#38bdf8;
+/* ANIMATION */
+.hidden{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.6s ease;
 }
 
-/* ARTIFACT */
-.artifact{
-  background:#0f172a;
-  padding:15px;
-  border-radius:10px;
-  margin-bottom:15px;
-  transition:0.3s;
+.show{
+  opacity:1;
+  transform:translateY(0);
 }
-.artifact:hover{transform:scale(1.02);}
-
-.artifact h3{color:#38bdf8;font-size:16px;}
 
 /* CONTACT */
 .contact{
@@ -121,19 +101,15 @@ h2{
   line-height:1.8;
 }
 
-/* FOOTER */
 footer{
   text-align:center;
-  padding:15px;
-  font-size:12px;
-  background:#020617;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <h2>Satish AI</h2>
 <div>
@@ -144,96 +120,104 @@ footer{
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Satish Padmanabuni</h1>
 <p>Full Stack Developer → Generative AI Engineer</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<section id="about" class="hidden">
 <h2>About Me</h2>
 <p>
-I am a Full Stack Developer with 5+ years of experience building scalable applications and transitioning into AI/ML.
-My goal is to develop intelligent AI systems that combine machine learning, data, and business context to solve real-world problems.
-I focus on building practical, interpretable, and impactful AI solutions.
+I build scalable applications and intelligent AI systems. My goal is to design AI solutions
+that combine machine learning, real-time data, and business logic to solve real-world problems.
 </p>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-<h2>Technical Skills</h2>
-
-<div class="skill">Frontend
-<div class="bar"><div style="width:90%"></div></div></div>
-
-<div class="skill">Backend
-<div class="bar"><div style="width:85%"></div></div></div>
-
-<div class="skill">Cloud & DevOps
-<div class="bar"><div style="width:80%"></div></div></div>
-
-<div class="skill">Machine Learning
-<div class="bar"><div style="width:75%"></div></div></div>
-
-<div class="skill">Data Analysis
-<div class="bar"><div style="width:78%"></div></div></div>
-
+<section id="skills" class="hidden">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">Frontend: React, Angular</div>
+<div class="card">Backend: Java, Spring Boot</div>
+<div class="card">Cloud: AWS, Docker</div>
+<div class="card">AI/ML: Machine Learning</div>
+</div>
 </section>
 
-<!-- ARTIFACTS -->
-<section id="artifacts">
+<section id="artifacts" class="hidden">
 <h2>Portfolio Artifacts</h2>
 
-<div class="artifact">
-<h3>Artifact 1: AI/ML Timeline</h3>
-<p><b>Objective:</b> Plan AI career growth</p>
-<p><b>Process:</b> Structured roadmap</p>
-<p><b>Tools:</b> Research</p>
-<p><b>Value:</b> Demonstrates long-term planning</p>
+<div class="grid">
+
+<div class="card" onclick="location.href='artifacts/artifact1.html'">
+<h3>Artifact 1</h3>
+<p>AI/ML Timeline</p>
 </div>
 
-<div class="artifact">
-<h3>Artifact 2: AI Habit Tracker Chatbot</h3>
-<p><b>Objective:</b> Track habits using chatbot</p>
-<p><b>Process:</b> Conversational logic</p>
-<p><b>Tools:</b> Python</p>
-<p><b>Value:</b> Shows AI interaction design</p>
+<div class="card" onclick="location.href='artifacts/artifact2.html'">
+<h3>Artifact 2</h3>
+<p>AI Chatbot</p>
 </div>
 
-<div class="artifact">
-<h3>Artifact 3: AI Research (STORM AI)</h3>
-<p><b>Objective:</b> AI-driven research</p>
-<p><b>Process:</b> Brainstorm → Validate → Analyze</p>
-<p><b>Tools:</b> STORM AI, ChatGPT</p>
-<p><b>Value:</b> Demonstrates analytical thinking</p>
+<div class="card" onclick="location.href='artifacts/artifact3.html'">
+<h3>Artifact 3</h3>
+<p>AI Research</p>
 </div>
 
-<div class="artifact">
-<h3>🔥 Artifact 4: ML Data Challenge Coach</h3>
-<p><b>Objective:</b> Solve real ML problems</p>
-<p><b>Process:</b> Missing data, imbalance, anomaly detection</p>
-<p><b>Tools:</b> ML Pipelines, Python</p>
-<p><b>Value:</b> Shows production-level ML thinking</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artifact 4</title>
+<style>
+body{font-family:Poppins;background:#020617;color:white;padding:40px;}
+h1{color:#38bdf8;}
+</style>
+</head>
+<body>
 
-</section>
+<h1>Artifact 4: ML Data Challenge Coach</h1>
 
-<!-- CONTACT -->
-<section id="contact">
+<p><b>Objective:</b> Solve real-world ML problems</p>
+
+<p><b>Process:</b>
+Handled missing data, class imbalance, and anomaly detection scenarios using structured ML approaches.
+</p>
+
+<p><b>Tools:</b> Python, Scikit-learn, ML Pipelines</p>
+
+<p><b>Value Proposition:</b>
+This project demonstrates advanced machine learning thinking including data preprocessing,
+model evaluation, and real-world decision-making.
+</p>
+
+</body>
+</html>
+
+<section id="contact" class="hidden">
 <h2>Let’s Connect</h2>
 <div class="contact">
 <p><b>Name:</b> Satish Padanabuni</p>
 <p><b>Role:</b> Developer</p>
 <p><b>Email:</b> your-email@example.com</p>
-<p><b>GitHub:</b> <a href="https://github.com/Satishqw">github.com/Satishqw</a></p>
+<p><b>GitHub:</b> https://github.com/Satishqw</p>
 <p><b>Focus:</b> Analytics, AI, and Generative AI Engineering</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Satish Padmanabuni | AI Portfolio</p>
+<p>© 2026 Satish</p>
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
