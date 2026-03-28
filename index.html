@@ -3,21 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Satish Padmanabuni | AI/ML Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
 body{
   background:#020617;
   color:white;
+  scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -25,7 +22,7 @@ nav{
   position:fixed;
   width:100%;
   top:0;
-  background:#020617;
+  background:rgba(2,6,23,0.95);
   display:flex;
   justify-content:space-between;
   padding:10px 30px;
@@ -35,7 +32,7 @@ nav{
 
 nav h2{color:#38bdf8;font-size:18px;}
 nav a{
-  color:white;
+  color:#cbd5f5;
   margin-left:15px;
   text-decoration:none;
   font-size:14px;
@@ -43,7 +40,7 @@ nav a{
 
 /* HERO */
 .hero{
-  height:80vh;
+  height:85vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -52,8 +49,10 @@ nav a{
 }
 
 .hero h1{
-  font-size:40px;
-  color:#38bdf8;
+  font-size:42px;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
@@ -62,15 +61,12 @@ nav a{
 }
 
 /* SECTIONS */
-section{
-  padding:40px 8%;
-}
-
+section{padding:50px 8%;}
 h2{
   margin-bottom:20px;
   font-size:24px;
   border-left:4px solid #38bdf8;
-  padding-left:8px;
+  padding-left:10px;
 }
 
 /* GRID */
@@ -84,23 +80,38 @@ h2{
 .card{
   background:#0f172a;
   padding:15px;
-  border-radius:8px;
-  font-size:14px;
+  border-radius:10px;
+  transition:0.3s;
 }
 
-/* ARTIFACTS */
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 10px #38bdf8;
+}
+
+/* SKILL BARS */
+.skill{margin-bottom:10px;}
+.bar{
+  background:#1e293b;
+  border-radius:10px;
+  overflow:hidden;
+}
+.bar div{
+  height:8px;
+  background:#38bdf8;
+}
+
+/* ARTIFACT */
 .artifact{
   background:#0f172a;
   padding:15px;
-  border-radius:8px;
+  border-radius:10px;
   margin-bottom:15px;
-  font-size:14px;
+  transition:0.3s;
 }
+.artifact:hover{transform:scale(1.02);}
 
-.artifact h3{
-  color:#38bdf8;
-  font-size:16px;
-}
+.artifact h3{color:#38bdf8;font-size:16px;}
 
 /* CONTACT */
 .contact{
@@ -110,6 +121,7 @@ h2{
   line-height:1.8;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
   padding:15px;
@@ -121,6 +133,7 @@ footer{
 
 <body>
 
+<!-- NAV -->
 <nav>
 <h2>Satish AI</h2>
 <div>
@@ -134,7 +147,7 @@ footer{
 <!-- HERO -->
 <section class="hero">
 <h1>Satish Padmanabuni</h1>
-<p>Full Stack Developer | AI & Generative AI Enthusiast</p>
+<p>Full Stack Developer → Generative AI Engineer</p>
 </section>
 
 <!-- ABOUT -->
@@ -142,21 +155,30 @@ footer{
 <h2>About Me</h2>
 <p>
 I am a Full Stack Developer with 5+ years of experience building scalable applications and transitioning into AI/ML.
-My goal is to become a Generative AI Engineer, creating intelligent systems that combine data, machine learning, and real-world business needs.
+My goal is to develop intelligent AI systems that combine machine learning, data, and business context to solve real-world problems.
+I focus on building practical, interpretable, and impactful AI solutions.
 </p>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
 <h2>Technical Skills</h2>
-<div class="grid">
-<div class="card">Frontend: React, Angular, HTML, CSS</div>
-<div class="card">Backend: Java, Spring Boot, Node.js</div>
-<div class="card">Cloud: AWS, Docker, Kubernetes</div>
-<div class="card">Database: MongoDB, PostgreSQL</div>
-<div class="card">AI/ML: Machine Learning, Data Analysis</div>
-<div class="card">Tools: Git, Jenkins, CI/CD</div>
-</div>
+
+<div class="skill">Frontend
+<div class="bar"><div style="width:90%"></div></div></div>
+
+<div class="skill">Backend
+<div class="bar"><div style="width:85%"></div></div></div>
+
+<div class="skill">Cloud & DevOps
+<div class="bar"><div style="width:80%"></div></div></div>
+
+<div class="skill">Machine Learning
+<div class="bar"><div style="width:75%"></div></div></div>
+
+<div class="skill">Data Analysis
+<div class="bar"><div style="width:78%"></div></div></div>
+
 </section>
 
 <!-- ARTIFACTS -->
@@ -165,31 +187,34 @@ My goal is to become a Generative AI Engineer, creating intelligent systems that
 
 <div class="artifact">
 <h3>Artifact 1: AI/ML Timeline</h3>
-<p><b>Objective:</b> Learning roadmap for AI career</p>
-<p><b>Tools:</b> Research, Planning</p>
-<p><b>Value:</b> Shows structured career growth strategy</p>
+<p><b>Objective:</b> Plan AI career growth</p>
+<p><b>Process:</b> Structured roadmap</p>
+<p><b>Tools:</b> Research</p>
+<p><b>Value:</b> Demonstrates long-term planning</p>
 </div>
 
 <div class="artifact">
 <h3>Artifact 2: AI Habit Tracker Chatbot</h3>
-<p><b>Objective:</b> Track health habits using AI chatbot</p>
-<p><b>Tools:</b> Python, Chatbot Logic</p>
-<p><b>Value:</b> Demonstrates AI interaction & automation</p>
+<p><b>Objective:</b> Track habits using chatbot</p>
+<p><b>Process:</b> Conversational logic</p>
+<p><b>Tools:</b> Python</p>
+<p><b>Value:</b> Shows AI interaction design</p>
 </div>
 
 <div class="artifact">
-<h3>Artifact 3: AI Research with STORM AI</h3>
-<p><b>Objective:</b> AI-assisted research & brainstorming</p>
+<h3>Artifact 3: AI Research (STORM AI)</h3>
+<p><b>Objective:</b> AI-driven research</p>
+<p><b>Process:</b> Brainstorm → Validate → Analyze</p>
 <p><b>Tools:</b> STORM AI, ChatGPT</p>
-<p><b>Value:</b> Shows research, analysis & critical thinking</p>
+<p><b>Value:</b> Demonstrates analytical thinking</p>
 </div>
 
 <div class="artifact">
-<h3>Artifact 4: ML Data Challenge Coach</h3>
-<p><b>Objective:</b> Solve real-world ML problems</p>
-<p><b>Process:</b> Missing data, imbalanced data, anomaly detection</p>
-<p><b>Tools:</b> ML Pipelines, Python, AI Chatbot</p>
-<p><b>Value:</b> Demonstrates strong applied ML decision-making</p>
+<h3>🔥 Artifact 4: ML Data Challenge Coach</h3>
+<p><b>Objective:</b> Solve real ML problems</p>
+<p><b>Process:</b> Missing data, imbalance, anomaly detection</p>
+<p><b>Tools:</b> ML Pipelines, Python</p>
+<p><b>Value:</b> Shows production-level ML thinking</p>
 </div>
 
 </section>
@@ -201,13 +226,13 @@ My goal is to become a Generative AI Engineer, creating intelligent systems that
 <p><b>Name:</b> Satish Padanabuni</p>
 <p><b>Role:</b> Developer</p>
 <p><b>Email:</b> your-email@example.com</p>
-<p><b>GitHub:</b> <a href="https://github.com/Satishqw" target="_blank">github.com/Satishqw</a></p>
+<p><b>GitHub:</b> <a href="https://github.com/Satishqw">github.com/Satishqw</a></p>
 <p><b>Focus:</b> Analytics, AI, and Generative AI Engineering</p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Satish Padmanabuni</p>
+<p>© 2026 Satish Padmanabuni | AI Portfolio</p>
 </footer>
 
 </body>
