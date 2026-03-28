@@ -3,135 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Satish Padmanabuni | AI Engineer</title>
+
+<title>Satish Padmanabuni | AI/ML Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
 body{
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+  background: linear-gradient(135deg,#020617,#0f172a,#020617);
+  color:white;
+  overflow-x:hidden;
 }
 
-/* PARTICLES */
-#particles-js{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
-/* NAVBAR */
+/* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-position:fixed;
-width:100%;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-z-index:10;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  padding:15px 40px;
+  z-index:1000;
 }
+
+nav h2{color:#38bdf8;}
 nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
 }
-nav a:hover{color:#38bdf8;}
 
 /* HERO */
-header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: radial-gradient(circle at top,#1e293b,#020617);
 }
 
-header h1{
-font-size:60px;
-background:linear-gradient(90deg,#38bdf8,#6366f1);
--webkit-background-clip:text;
-color:transparent;
+.hero h1{
+  font-size:60px;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-header p{
-max-width:600px;
-margin-top:10px;
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+  color:#cbd5f5;
 }
 
-/* SECTION */
+.hero button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#38bdf8;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* SECTIONS */
 section{
-padding:100px 10%;
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-section.show{
-opacity:1;
-transform:translateY(0);
+  padding:80px 10%;
 }
 
-/* GLASS CARD */
+h2{
+  margin-bottom:40px;
+  font-size:32px;
+  border-left:5px solid #38bdf8;
+  padding-left:10px;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
 .card{
-background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-transition:0.4s;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:20px;
+  transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(56,189,248,0.5);
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 20px #38bdf8;
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+/* ARTIFACTS */
+.artifact{
+  background:linear-gradient(145deg,#1e293b,#0f172a);
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:25px;
 }
 
-/* ARTIFACT */
-.artifact img{
-width:100%;
-border-radius:10px;
-margin-bottom:10px;
+.artifact h3{
+  color:#38bdf8;
+}
+
+.artifact a{
+  color:#a78bfa;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:20px;
-}
-
-/* BUTTON */
-.btn{
-background:#38bdf8;
-padding:10px 20px;
-border-radius:20px;
-color:black;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+  text-align:center;
+  padding:30px;
+  background:#020617;
 }
 </style>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
-
-<!-- NAV -->
 <nav>
-<h3>Satish</h3>
+<h2>Satish AI</h2>
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
@@ -141,94 +147,89 @@ margin-top:10px;
 </nav>
 
 <!-- HERO -->
-<header>
+<section class="hero">
 <h1>Satish Padmanabuni</h1>
-<p>AI/ML Engineer | Full Stack Developer | Building Intelligent Systems</p>
-</header>
+<p>Full Stack Developer → Generative AI Engineer</p>
+<button onclick="document.getElementById('artifacts').scrollIntoView()">View Portfolio</button>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<div class="card">
 <p>
-I am a Full Stack Developer evolving into an AI Engineer, focused on building real-time intelligent systems, anomaly detection pipelines, and AI-driven applications. I combine software engineering with machine learning to create scalable and impactful solutions.
+I am a Full Stack Developer with 5+ years of experience evolving into an AI/ML Engineer.
+My mission is to build intelligent AI systems like copilots, anomaly detection systems,
+and decision-support platforms that solve real-world problems. I specialize in scalable
+systems, cloud architecture, and AI-driven solutions.
 </p>
-</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Skills</h2>
+<h2>Technical Skills</h2>
 <div class="grid">
-<div class="card">React | Angular | UI/UX</div>
-<div class="card">Java | Spring Boot | Node.js</div>
-<div class="card">AWS | Docker | Kubernetes</div>
-<div class="card">Python | ML | Data Analysis</div>
+<div class="card">React, Angular, HTML, CSS</div>
+<div class="card">Java, Spring Boot, Node.js</div>
+<div class="card">AWS, Docker, Kubernetes</div>
+<div class="card">MongoDB, PostgreSQL</div>
+<div class="card">Machine Learning, AI</div>
+<div class="card">Data Analysis & Automation</div>
 </div>
 </section>
 
 <!-- ARTIFACTS -->
 <section id="artifacts">
-<h2>Portfolio Artifacts</h2>
-<div class="grid">
+<h2>AI/ML Portfolio Artifacts</h2>
 
-<div class="card artifact">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-<h3>AI/ML Timeline</h3>
-<p>Learning roadmap and career planning</p>
+<div class="artifact">
+<h3>Artifact 1: AI/ML Timeline</h3>
+<p>Structured roadmap of my AI learning journey and career growth.</p>
+<a href="#">View Artifact</a>
 </div>
 
-<div class="card artifact">
-<img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a">
-<h3>AI Chatbot</h3>
-<p>Habit tracking chatbot system</p>
+<div class="artifact">
+<h3>Artifact 2: AI Habit Tracker Chatbot</h3>
+<p>Chatbot for tracking health habits using conversational AI.</p>
+<a href="#">View Artifact</a>
 </div>
 
-<div class="card artifact">
-<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
-<h3>AI Research</h3>
-<p>STORM AI research and insights</p>
+<div class="artifact">
+<h3>Artifact 3: AI Research with STORM AI</h3>
+<p>AI-powered research and brainstorming project with data-driven insights.</p>
+<a href="#">View Artifact</a>
 </div>
 
-<div class="card artifact">
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
-<h3>🔥 Artifact 4: Anomaly Detection</h3>
-<p>Real-time AI system using Autoencoders + Streaming Data</p>
-<p><b>Key Skill:</b> Production ML Deployment</p>
+<div class="artifact">
+<h3>🔥 Artifact 4: ML Data Challenge Coach (Advanced)</h3>
+<p>
+End-to-end machine learning decision system covering:
+Missing Data, Imbalanced Classes, and Real-Time Anomaly Detection.
+</p>
+
+<ul>
+<li>Handled missing data with KNN & MICE</li>
+<li>Fraud detection with cost-sensitive learning</li>
+<li>Real-time anomaly detection using Autoencoders</li>
+<li>Built deployment-ready ML pipeline</li>
+</ul>
+
+<p><b>Tools:</b> Python, Scikit-learn, ML Pipelines, AI Chatbot</p>
+
+<p><b>Value:</b> Demonstrates production-level ML thinking and decision-making.</p>
 </div>
 
-</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<div class="card">
 <p>Email: satish.padmanabuni@myemail.indwes.edu</p>
-<p>GitHub: <a href="https://github.com/Satishqw" target="_blank">Satishqw</a></p>
-</div>
+<p>GitHub: <a href="https://github.com/Satishqw">github.com/Satishqw</a></p>
 </section>
 
 <footer>
-<p>© 2026 Satish</p>
+<p>© 2026 Satish | AI/ML Portfolio</p>
 </footer>
-
-<script>
-/* PARTICLES CONFIG */
-particlesJS("particles-js", {
-particles:{number:{value:80},size:{value:3},move:{speed:2}}
-});
-
-/* SCROLL ANIMATION */
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-if(window.scrollY+500>sec.offsetTop){
-sec.classList.add("show");
-}
-});
-});
-</script>
 
 </body>
 </html>
